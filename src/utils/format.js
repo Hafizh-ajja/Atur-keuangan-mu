@@ -9,3 +9,15 @@ export const formatDateLabel = (isoDate) =>
     month: "long",
     year: "numeric",
   });
+
+// Contoh: "Kamis, 13 Agustus 2026 pukul 15.00"
+export const formatDateTimeLabel = (date) => {
+  const d = date.toLocaleDateString("id-ID", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+  const t = date.toLocaleTimeString("id-ID", { hour: "2-digit", minute: "2-digit" });
+  return `${d} pukul ${t}`;
+};

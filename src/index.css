@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Plus Jakarta Sans — variable font, disertakan lokal agar tetap berfungsi offline */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("./assets/fonts/plus-jakarta-sans.woff2") format("woff2");
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-slate-100 text-slate-900;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme("colors.emerald.500");
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    @apply bg-emerald-600/20 text-emerald-950;
+  }
+}
+
+@layer utilities {
+  /* Scrollbar halus untuk area tabel yang bisa digulir horizontal */
+  .scrollbar-thin::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded-full;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400;
+  }
+}
