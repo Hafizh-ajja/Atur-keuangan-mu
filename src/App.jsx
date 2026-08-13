@@ -188,8 +188,8 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-100 font-sans text-slate-900">
       <PageHeader
-        title="Keuangan Masjid"
-        subtitle="Laporan pemasukan & pengeluaran dana masjid"
+        title="Tentang Keuangan"
+        subtitle="Laporan pemasukan & pengeluaran dana "
         badge={formatDateTimeLabel(new Date())}
       />
 
