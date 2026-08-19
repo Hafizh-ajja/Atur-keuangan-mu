@@ -23,13 +23,13 @@
   }
 
   :focus-visible {
-    outline: 2px solid theme("colors.emerald.500");
+    outline: 2px solid theme("colors.indigo.500");
     outline-offset: 2px;
     border-radius: 4px;
   }
 
   ::selection {
-    @apply bg-emerald-600/20 text-emerald-950;
+    @apply bg-indigo-600/20 text-indigo-950;
   }
 }
 

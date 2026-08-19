@@ -2,7 +2,7 @@ import { PlusCircle, PencilLine, X, Save } from "lucide-react";
 
 const labelCls = "block text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5";
 const inputCls =
-  "w-full h-10 px-3 rounded-xl border border-slate-200 bg-white text-[13px] font-medium text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/25 focus:border-emerald-500 transition";
+  "w-full h-10 px-3 rounded-xl border border-slate-200 bg-white text-[13px] font-medium text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/25 focus:border-indigo-500 transition";
 
 export default function TransactionForm({
   categoriesByType,
@@ -22,18 +22,18 @@ export default function TransactionForm({
   return (
     <div
       id="form-transaksi"
-      className="rounded-2xl bg-gradient-to-br from-emerald-50/80 via-white to-teal-50/60 ring-1 ring-emerald-100/70 p-5"
+      className="rounded-2xl bg-gradient-to-br from-indigo-50/80 via-white to-sky-50/60 ring-1 ring-indigo-100/70 p-5"
     >
       <div className="flex items-center justify-between flex-wrap gap-2 mb-4">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center shadow-sm shadow-emerald-600/30">
+          <div className="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center shadow-sm shadow-indigo-600/30">
             {editingId != null ? <PencilLine className="w-4 h-4" /> : <PlusCircle className="w-4 h-4" />}
           </div>
           <span className="text-[14px] font-bold text-slate-800">
             {editingId != null ? "Edit Transaksi" : "Tambah Transaksi Baru"}
           </span>
           {editingId != null && (
-            <span className="text-[11px] font-semibold text-white bg-emerald-600 px-2.5 py-1 rounded-full">
+            <span className="text-[11px] font-semibold text-white bg-indigo-600 px-2.5 py-1 rounded-full">
               Sedang mengedit #{editingId}
             </span>
           )}
@@ -101,7 +101,7 @@ export default function TransactionForm({
         )}
         <button
           onClick={onSubmit}
-          className="h-10 px-5 rounded-xl bg-gradient-to-br from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white text-[13px] font-bold shadow-md shadow-emerald-600/25 inline-flex items-center gap-2 transition"
+          className="h-10 px-5 rounded-xl bg-gradient-to-br from-indigo-600 to-blue-700 hover:from-indigo-700 hover:to-blue-700 text-white text-[13px] font-bold shadow-md shadow-indigo-600/25 inline-flex items-center gap-2 transition"
         >
           <Save className="w-4 h-4" />
           {editingId != null ? "Simpan Perubahan" : "Simpan Transaksi"}

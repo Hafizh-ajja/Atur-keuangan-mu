@@ -18,7 +18,11 @@ npm run dev
 
 - Default port: 5173. Prefer it if free; if taken (e.g. another instance), use
   `npm run dev -- --port 5174 --strictPort`.
-- Current live instance was started detached on **http://localhost:5174/**
+- **Must bind IPv4**: run with `--host 127.0.0.1`. Without it Vite listens only on
+  IPv6 `[::1]` and the preview registration probe (which hits `127.0.0.1`) fails
+  with "did not answer an HTTP request".
+  Full command: `npm run dev -- --port 5174 --strictPort --host 127.0.0.1`.
+- Current live instance was started detached on **http://127.0.0.1:5174/**
   (port 5173 was occupied by the user's own server).
 - Logs: `.freebuff/preview-7170b9de-0b40-4ad5-b16b-a204baa4f4c2.log` (+ `.err`).
 

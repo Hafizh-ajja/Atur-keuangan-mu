@@ -1,9 +1,9 @@
 const TONES = {
   hero: {
-    card: "relative overflow-hidden p-5 rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-700 text-white shadow-lg shadow-emerald-700/25",
-    label: "text-emerald-100/70",
+    card: "relative overflow-hidden p-5 rounded-2xl bg-gradient-to-br from-indigo-600 to-blue-700 text-white shadow-lg shadow-indigo-700/25",
+    label: "text-indigo-100/70",
     value: "text-white text-[30px]",
-    foot: "text-emerald-100/60",
+    foot: "text-indigo-100/60",
     tile: "bg-white/15 text-white",
     glow: true,
   },
@@ -12,7 +12,7 @@ const TONES = {
     label: "text-slate-400",
     value: "text-slate-900",
     foot: "text-slate-400",
-    tile: "bg-emerald-50 text-emerald-600",
+    tile: "bg-indigo-50 text-indigo-600",
     glow: false,
   },
   down: {

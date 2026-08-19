@@ -55,12 +55,11 @@ export default function TransactionTable({ rows, onDelete, onEdit }) {
                 <td className="py-4 text-slate-500 whitespace-nowrap">{formatDateLabel(t.date)}</td>
                 <td className="py-4 font-semibold text-slate-800">{t.desc}</td>
                 <td className="py-4"><CategoryTag cat={t.cat} type={t.type} /></td>
-                <td className={"py-4 text-right font-semibold tabular-nums whitespace-nowrap " + (t.type === "masuk" ? "text-emerald-600" : "text-red-500")}>
-                  {t.type === "masuk" ? "+" : "−"}{rupiah(t.amount)}
+                <td className={"py-4 text-right font-semibold tabular-nums whitespace-nowrap " + (t.type === "masuk" ? "text-indigo-600" : "text-red-500")}>                    {t.type === "masuk" ? "+" : "−"}{rupiah(t.amount)}
                 </td>
                 <td className="py-4">
-                  <span className={"inline-flex items-center gap-1.5 text-[12px] font-semibold " + (t.type === "masuk" ? "text-emerald-700" : "text-amber-700")}>
-                    <i className={"w-1.5 h-1.5 rounded-full inline-block " + (t.type === "masuk" ? "bg-emerald-600" : "bg-amber-500")} />
+                  <span className={"inline-flex items-center gap-1.5 text-[12px] font-semibold " + (t.type === "masuk" ? "text-indigo-700" : "text-amber-700")}>
+                    <i className={"w-1.5 h-1.5 rounded-full inline-block " + (t.type === "masuk" ? "bg-indigo-600" : "bg-amber-500")} />
                     {t.type === "masuk" ? "Pemasukan" : "Pengeluaran"}
                   </span>
                 </td>

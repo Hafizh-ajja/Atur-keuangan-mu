@@ -30,12 +30,12 @@ export default function TrendChart({ data }) {
     <div className="rounded-2xl bg-white p-5 sm:p-6 shadow-card ring-1 ring-slate-900/5 h-full">
       <div className="flex items-start justify-between flex-wrap gap-2 mb-5">
         <div>
-          <h3 className="text-[15px] font-bold text-slate-800 m-0">Tren Keuangan 6 Bulan</h3>
-          <p className="text-xs text-slate-400 mt-0.5 m-0">Ringkasan pemasukan vs pengeluaran</p>
+          <h3 className="text-[15px] font-bold text-slate-800 m-0">Tren Pemasukan vs Pengeluaran</h3>
+          <p className="text-xs text-slate-400 mt-0.5 m-0">Ringkasan 6 bulan terakhir</p>
         </div>
         <div className="flex gap-4 text-xs font-medium text-slate-500">
           <span className="flex items-center gap-1.5">
-            <i className="w-2.5 h-2.5 rounded-md bg-emerald-600 inline-block" />
+            <i className="w-2.5 h-2.5 rounded-md bg-indigo-600 inline-block" />
             Pemasukan
           </span>
           <span className="flex items-center gap-1.5">
@@ -49,8 +49,8 @@ export default function TrendChart({ data }) {
           <AreaChart data={data} margin={{ left: 4, right: 12, top: 8, bottom: 0 }}>
             <defs>
               <linearGradient id="fillMasuk" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#059669" stopOpacity={0.22} />
-                <stop offset="100%" stopColor="#059669" stopOpacity={0} />
+                <stop offset="0%" stopColor="#6366f1" stopOpacity={0.22} />
+                <stop offset="100%" stopColor="#6366f1" stopOpacity={0} />
               </linearGradient>
               <linearGradient id="fillKeluar" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stopColor="#f59e0b" stopOpacity={0.1} />
@@ -76,10 +76,10 @@ export default function TrendChart({ data }) {
             <Area
               type="monotone"
               dataKey="Pemasukan"
-              stroke="#059669"
+              stroke="#6366f1"
               strokeWidth={2.5}
               fill="url(#fillMasuk)"
-              dot={{ r: 3, fill: "#059669", strokeWidth: 2, stroke: "#fff" }}
+              dot={{ r: 3, fill: "#6366f1", strokeWidth: 2, stroke: "#fff" }}
               activeDot={{ r: 5 }}
             />
             <Area

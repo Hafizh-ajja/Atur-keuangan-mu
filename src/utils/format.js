@@ -10,6 +10,13 @@ export const formatDateLabel = (isoDate) =>
     year: "numeric",
   });
 
+// Contoh: "Agustus 2026" dari kunci bulan "2026-08"
+export const formatMonthLabel = (month) =>
+  new Date(month + "-01T00:00:00").toLocaleDateString("id-ID", {
+    month: "long",
+    year: "numeric",
+  });
+
 // Contoh: "Kamis, 13 Agustus 2026 pukul 15.00"
 export const formatDateTimeLabel = (date) => {
   const d = date.toLocaleDateString("id-ID", {

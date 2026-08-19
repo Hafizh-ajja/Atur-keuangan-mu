@@ -7,7 +7,7 @@ const TYPE_OPTIONS = [
 ];
 
 const inputCls =
-  "h-10 px-3 rounded-xl border border-slate-200 bg-white text-[13px] font-medium text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/25 focus:border-emerald-500 transition";
+  "h-10 px-3 rounded-xl border border-slate-200 bg-white text-[13px] font-medium text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/25 focus:border-indigo-500 transition";
 
 export default function FilterBar({
   categories,
@@ -28,7 +28,7 @@ export default function FilterBar({
             className={
               "px-3.5 py-1.5 rounded-lg text-[12.5px] font-semibold transition " +
               (typeFilter === opt.key
-                ? "bg-white text-emerald-700 shadow-sm ring-1 ring-slate-900/5"
+                ? "bg-white text-indigo-700 shadow-sm ring-1 ring-slate-900/5"
                 : "text-slate-500 hover:text-slate-700")
             }
           >
@@ -39,8 +39,8 @@ export default function FilterBar({
 
       <select value={catFilter} onChange={(e) => onCatFilterChange(e.target.value)} className={inputCls}>
         <option value="semua">Semua kategori</option>
-        {categories.map((c) => (
-          <option key={c} value={c}>{c}</option>
+        {categories.map((c, i) => (
+          <option key={`${c}-${i}`} value={c}>{c}</option>
         ))}
       </select>
 
@@ -63,7 +63,7 @@ export default function FilterBar({
 
       <button
         onClick={onExport}
-        className="h-10 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[13px] font-semibold shadow-sm shadow-emerald-600/25 inline-flex items-center gap-2 transition"
+        className="h-10 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-[13px] font-semibold shadow-sm shadow-indigo-600/25 inline-flex items-center gap-2 transition"
       >
         <Download className="w-4 h-4" />
         Export Spreadsheet
