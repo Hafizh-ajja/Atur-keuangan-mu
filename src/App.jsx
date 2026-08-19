@@ -364,8 +364,13 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-100 font-sans text-slate-900">
       <PageHeader
+<<<<<<< HEAD
         title="Percetakan Pak Abas"
         subtitle="Pusat permintaan cetak, pemasukan & pengeluaran"
+=======
+        title="Tentang Keuangan"
+        subtitle="Laporan pemasukan & pengeluaran dana "
+>>>>>>> 968f05c08a0d68ae14c44ffb0439b1ca66df6e27
         badge={formatDateTimeLabel(new Date())}
       />
 
